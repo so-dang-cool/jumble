@@ -1,0 +1,8 @@
+# sbt things
+/.bsp/
+target/
+
+# misc
+/.idea/
+/.vscode/
+
