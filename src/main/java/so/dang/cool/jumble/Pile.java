@@ -53,12 +53,12 @@ public interface Pile<TOP, PREV extends Pile<?, ?>> {
 
         @Override
         public Void top() {
-            throw new IndexOutOfBoundsException("Jumble overflow!");
+            throw new IndexOutOfBoundsException("Pile overflow!");
         }
 
         @Override
         public Empty next() {
-            throw new IndexOutOfBoundsException("Jumble overflow!");
+            throw new IndexOutOfBoundsException("Pile overflow!");
         }
 
         @Override

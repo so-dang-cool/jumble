@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 
 public class PileJavaSuite extends TestNGSuite {
     @Test
-    public void jumbleOfThreeIsOk() {
+    public void pileOfThreeIsOk() {
         var pile = Pile.of(
                 List.of('a', 'b', 'c'),
                 17,
