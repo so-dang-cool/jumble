@@ -8,8 +8,8 @@ class PileScalaSuite extends AnyFunSuite {
 
         // The test is mostly that typing works here without casting:
         val abcs: (Char, Char, Char) = pile.top
-        val seventeen: Int = pile.next.top
-        val greeting: String = pile.next.next.top
+        val seventeen: Int = pile.under.top
+        val greeting: String = pile.under.under.top
 
         assertResult(('a', 'b', 'c'))(abcs)
         assertResult(17)(seventeen)
@@ -18,15 +18,15 @@ class PileScalaSuite extends AnyFunSuite {
         assert(!pile.isEmpty)
         assertResult(3)(pile.size)
 
-        assert(!pile.next.isEmpty)
-        assertResult(2)(pile.next.size)
+        assert(!pile.under.isEmpty)
+        assertResult(2)(pile.under.size)
 
-        assert(!pile.next.next.isEmpty)
-        assertResult(1)(pile.next.next.size)
+        assert(!pile.under.under.isEmpty)
+        assertResult(1)(pile.under.under.size)
 
-        assert(pile.next.next.next.isEmpty)
-        assertResult(0)(pile.next.next.next.size)
+        assert(pile.under.under.under.isEmpty)
+        assertResult(0)(pile.under.under.under.size)
 
-        assertThrows[RuntimeException](pile.next.next.next.next)
+        assertThrows[RuntimeException](pile.under.under.under.under)
     }
 }

@@ -4,11 +4,11 @@ package so.dang.cool.jumble;
  * A Pile is a last-in first-out stack of independently typed nodes.
  *
  * @param <TOP> The "top" item in the current Pile. This is the most-recently added item.
- * @param <PREV> The underlying Pile.
+ * @param <UNDER> The underlying Pile.
  */
-public interface Pile<TOP, PREV extends Pile<?, ?>> {
+public interface Pile<TOP, UNDER extends Pile<?, ?>> {
     TOP top();
-    PREV next();
+    UNDER under();
     long size();
 
     /**
@@ -20,7 +20,7 @@ public interface Pile<TOP, PREV extends Pile<?, ?>> {
      * @return A new Pile with the {@param next} item on top.
      * @param <NEXT> The type of the {@param next} item.
      */
-    default <NEXT> Pile<NEXT, Pile<TOP, PREV>> putOn(NEXT next) {
+    default <NEXT> Pile<NEXT, Pile<TOP, UNDER>> putOn(NEXT next) {
         return new Thing<>(next, this, size() + 1);
     }
 
@@ -57,7 +57,7 @@ public interface Pile<TOP, PREV extends Pile<?, ?>> {
         }
 
         @Override
-        public Empty next() {
+        public Empty under() {
             throw new IndexOutOfBoundsException("Pile overflow!");
         }
 
@@ -67,14 +67,14 @@ public interface Pile<TOP, PREV extends Pile<?, ?>> {
         }
     }
 
-    class Thing<TOP, PREV extends Pile<?, ?>> implements Pile<TOP, PREV> {
-        private final PREV prev;
+    class Thing<TOP, UNDER extends Pile<?, ?>> implements Pile<TOP, UNDER> {
         private final TOP top;
+        private final UNDER under;
         private final long size;
 
-        private Thing(TOP top, PREV prev, long size) {
-            this.prev = prev;
+        private Thing(TOP top, UNDER under, long size) {
             this.top = top;
+            this.under = under;
             this.size = size;
         }
 
@@ -84,8 +84,8 @@ public interface Pile<TOP, PREV extends Pile<?, ?>> {
         }
 
         @Override
-        public PREV next() {
-            return prev;
+        public UNDER under() {
+            return under;
         }
 
         @Override

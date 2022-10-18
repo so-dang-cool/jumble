@@ -18,8 +18,8 @@ public class PileJavaSuite extends TestNGSuite {
 
         // The test is that typing works here without casting. (I.e. compiling is the test)
         List<Character> abcs = pile.top();
-        int seventeen = pile.next().top();
-        String greeting = pile.next().next().top();
+        int seventeen = pile.under().top();
+        String greeting = pile.under().under().top();
 
         assertEquals(abcs, List.of('a', 'b', 'c'));
         assertEquals(seventeen, 17);
