@@ -12,13 +12,13 @@ public interface Pile<TOP, UNDER extends Pile<?, ?>> {
     long size();
 
     /**
-     * Create a new Pile that has the {@param next} item on top, and the current Pile beneath it.
+     * Create a new Pile that has the {@code next} item on top, and the current Pile beneath it.
      * <p>
      * The original Pile is never mutated.
      *
      * @param next The item to add on top.
-     * @return A new Pile with the {@param next} item on top.
-     * @param <NEXT> The type of the {@param next} item.
+     * @return A new Pile with the {@code next} item on top.
+     * @param <NEXT> The type of the {@code next} item.
      */
     default <NEXT> Pile<NEXT, Pile<TOP, UNDER>> putOn(NEXT next) {
         return new Thing<>(next, this, size() + 1);
