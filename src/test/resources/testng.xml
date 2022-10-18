@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="All" verbose="1" >
+    <test name="JavaTests" >
+        <packages>
+            <package name="so.dang.cool" />
+        </packages>
+    </test>
+</suite>

@@ -1,6 +1,7 @@
 # sbt things
 /.bsp/
 target/
+test-output/
 
 # misc
 /.idea/
