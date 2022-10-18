@@ -4,7 +4,7 @@ import org.scalatest.funsuite.AnyFunSuite
 
 class PileScalaSuite extends AnyFunSuite {
     test("Types and values work out ok. (One, push two more)") {
-        val pile = Pile.of("Hello!").add(17).add(('a', 'b', 'c'))
+        val pile = Pile.of("Hello!").putOn(17).putOn(('a', 'b', 'c'))
 
         // The test is mostly that typing works here without casting:
         val abcs: (Char, Char, Char) = pile.top

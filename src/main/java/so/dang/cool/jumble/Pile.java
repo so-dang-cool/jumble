@@ -20,7 +20,7 @@ public interface Pile<TOP, PREV extends Pile<?, ?>> {
      * @return A new Pile with the {@param next} item on top.
      * @param <NEXT> The type of the {@param next} item.
      */
-    default <NEXT> Pile<NEXT, Pile<TOP, PREV>> add(NEXT next) {
+    default <NEXT> Pile<NEXT, Pile<TOP, PREV>> putOn(NEXT next) {
         return new Thing<>(next, this, size() + 1);
     }
 
@@ -33,19 +33,19 @@ public interface Pile<TOP, PREV extends Pile<?, ?>> {
     }
 
     static <A, B> Pile<A, Pile<B, Empty>> of(B b, A a) {
-        return Pile.of(b).add(a);
+        return Pile.of(b).putOn(a);
     }
 
     static <A, B, C> Pile<A, Pile<B, Pile<C, Empty>>> of(A a, B b, C c) {
-        return Pile.of(c).add(b).add(a);
+        return Pile.of(c).putOn(b).putOn(a);
     }
 
     static <A, B, C, D> Pile<A, Pile<B, Pile<C, Pile<D, Empty>>>> of(A a, B b, C c, D d) {
-        return Pile.of(d).add(c).add(b).add(a);
+        return Pile.of(d).putOn(c).putOn(b).putOn(a);
     }
 
     static <A, B, C, D, E> Pile<A, Pile<B, Pile<C, Pile<D, Pile<E, Empty>>>>> of(A a, B b, C c, D d, E e) {
-        return Pile.of(e).add(d).add(c).add(b).add(a);
+        return Pile.of(e).putOn(d).putOn(c).putOn(b).putOn(a);
     }
 
     class Empty implements Pile<Void, Empty> {
