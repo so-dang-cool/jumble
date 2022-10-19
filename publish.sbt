@@ -1,6 +1,7 @@
 ThisBuild / organization := "so.dang.cool"
 ThisBuild / organizationName := "jumble"
 ThisBuild / organizationHomepage := Some(url("http://github.com/hiljusti/jumble"))
+ThisBuild / versionScheme := Some("semver-spec")
 
 ThisBuild / scmInfo := Some(
   ScmInfo(
