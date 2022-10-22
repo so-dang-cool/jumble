@@ -1,7 +1,7 @@
 name := "jumble"
 description := "Collections for independently typed items."
 organization := "so.dang.cool"
-version := "0.1.0"
+version := "0.1.1"
 
 // Do not include the scala library as a dependency.
 autoScalaLibrary := false

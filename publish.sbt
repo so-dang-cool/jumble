@@ -1,6 +1,5 @@
-ThisBuild / organization := "so.dang.cool"
-ThisBuild / organizationName := "jumble"
-ThisBuild / organizationHomepage := Some(url("http://github.com/hiljusti/jumble"))
+ThisBuild / organizationName := "so.dang.cool"
+ThisBuild / organizationHomepage := Some(url("https://so.dang.cool"))
 ThisBuild / versionScheme := Some("semver-spec")
 
 ThisBuild / scmInfo := Some(
@@ -20,7 +19,7 @@ ThisBuild / developers := List(
 
 ThisBuild / description := "Collections for independently typed items."
 ThisBuild / licenses := List(
-  "Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt")
+  "BSD-3-Clause" -> new URL("https://github.com/hiljusti/jumble/blob/core/LICENSE")
 )
 ThisBuild / homepage := Some(url("https://github.com/hiljusti/jumble"))
 
