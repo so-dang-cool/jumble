@@ -20,7 +20,6 @@ ThisBuild / developers := List(
   )
 )
 
-ThisBuild / description := "Collections for independently typed items."
 ThisBuild / licenses := List(
   "BSD-3-Clause" -> new URL("https://github.com/hiljusti/jumble/blob/core/LICENSE")
 )
