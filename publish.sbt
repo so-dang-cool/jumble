@@ -1,6 +1,9 @@
+ThisBuild / description := "Collections for independently typed items."
 ThisBuild / organizationName := "so.dang.cool"
 ThisBuild / organizationHomepage := Some(url("https://so.dang.cool"))
 ThisBuild / versionScheme := Some("semver-spec")
+
+ThisBuild / publishMavenStyle := true
 
 ThisBuild / scmInfo := Some(
   ScmInfo(

@@ -1,15 +1,12 @@
 name := "jumble"
-description := "Collections for independently typed items."
 organization := "so.dang.cool"
-version := "0.1.1"
+version := "0.2.0"
 
 // Do not include the scala library as a dependency.
 autoScalaLibrary := false
 
 // Do not include the scala version in suffixes.
 crossPaths := false
-
-publishMavenStyle := true
 
 // https://www.scalatest.org
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.14" % "test"

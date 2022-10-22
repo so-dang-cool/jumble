@@ -28,11 +28,15 @@ public interface Pile<TOP, UNDER extends Pile<?, ?>> {
         return size() == 0;
     }
 
+    static Pile<Void, Empty> of() {
+        return new Empty();
+    }
+
     static <A> Pile<A, Empty> of(A a) {
         return new Thing<>(a, new Empty(), 1L);
     }
 
-    static <A, B> Pile<A, Pile<B, Empty>> of(B b, A a) {
+    static <A, B> Pile<A, Pile<B, Empty>> of(A a, B b) {
         return Pile.of(b).putOn(a);
     }
 
