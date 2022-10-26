@@ -4,11 +4,12 @@
  * These are special-case data collections, and require ahead-of-time knowledge
  * of how and where they will be used.
  * <p>
- * These types are intended to be traversed "manually" and do <b>not</b>
+ * Some types are intended to be traversed "manually" and do <b>not</b>
  * implement the {@link java.util.Collection} or {@link java.lang.Iterable}
- * interfaces. It's not possible to get individual types into that kind of
- * context. If you really really need to operate in that world, you're better
- * off with something that implements {@code Collection<Object>}.
+ * interfaces. These are cases where it's not possible to get individual types
+ * into that kind of context. If you really really feel the need to operate in
+ * that world, you may be better off with something that implements
+ * {@code Collection<Object>}.
  * <p>
  * Some use cases considered:
  * <ul>
