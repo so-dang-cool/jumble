@@ -14,7 +14,7 @@ package so.dang.cool.jumble;
  *   <li>The most recently added item is accessible with {@link Pile#top()}</li>
  *   <li>All other items are accessible as a Pile with {@link Pile#under()}</li>
  *   <li>
- *     Add an item with {@link Pile#putOn()}. It becomes the new "top" and the
+ *     Add an item with {@link Pile#putOn(Object)}. It becomes the new "top" and the
  *     previous pile beomes the new "under."
  *   </li>
  *   <li>
@@ -82,6 +82,8 @@ public interface Pile<TOP, UNDER extends Pile<?, ?>> {
 
     /**
      * Create a new Pile of a single item.
+     * @param <A> Type of the item.
+     * @param a The item.
      * @return A new Pile of a single item.
      */
     static <A> Pile<A, Empty> of(A a) {
@@ -90,6 +92,10 @@ public interface Pile<TOP, UNDER extends Pile<?, ?>> {
 
     /**
      * Create a new Pile of two items. The first parameter will be the top.
+     * @param <A> Type of the top item.
+     * @param a The top item.
+     * @param <B> Type of the bottom item.
+     * @param b The bottom item.
      * @return A new Pile of two items.
      */
     static <A, B> Pile<A, Pile<B, Empty>> of(A a, B b) {
@@ -98,7 +104,13 @@ public interface Pile<TOP, UNDER extends Pile<?, ?>> {
 
     /**
      * Create a new Pile of three items. The first parameter will be the top,
-     * the second second, and the last last.
+     * the second will be second, and the last will be last.
+     * @param <A> Type of the top item.
+     * @param a The top item.
+     * @param <B> Type of the middle item.
+     * @param b The middle item.
+     * @param <C> Type of the bottom item.
+     * @param c The bottom item.
      * @return A new Pile of three items.
      */
     static <A, B, C> Pile<A, Pile<B, Pile<C, Empty>>> of(A a, B b, C c) {
@@ -107,7 +119,15 @@ public interface Pile<TOP, UNDER extends Pile<?, ?>> {
 
     /**
      * Create a new Pile of four items. The first parameter will be the top,
-     * the second second, and so on, with the last as last.
+     * the second will be second, and so on, with the last as last.
+     * @param <A> Type of the top item.
+     * @param a The top item.
+     * @param <B> Type of the second item.
+     * @param b The second item.
+     * @param <C> Type of the third item.
+     * @param c The third item.
+     * @param <D> Type of the bottom item.
+     * @param d The bottom item.
      * @return A new Pile of four items.
      */
     static <A, B, C, D> Pile<A, Pile<B, Pile<C, Pile<D, Empty>>>> of(A a, B b, C c, D d) {
@@ -116,7 +136,17 @@ public interface Pile<TOP, UNDER extends Pile<?, ?>> {
 
     /**
      * Create a new Pile of five items. The first parameter will be the top,
-     * the second second, and so on, with the last as last.
+     * the second will be second, and so on, with the last as last.
+     * @param <A> Type of the top item.
+     * @param a The top item.
+     * @param <B> Type of the second item.
+     * @param b The second item.
+     * @param <C> Type of the third item.
+     * @param c The third item.
+     * @param <D> Type of the fourth item.
+     * @param d The fourth item.
+     * @param <E> Type of the bottom item.
+     * @param e The bottom item.
      * @return A new Pile of five items.
      */
     static <A, B, C, D, E> Pile<A, Pile<B, Pile<C, Pile<D, Pile<E, Empty>>>>> of(A a, B b, C c, D d, E e) {
