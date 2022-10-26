@@ -1,3 +1,6 @@
+// tl;dr: sbt test doc publishSigned
+// TODO: https://www.scala-sbt.org/release/docs/Using-Sonatype.html#Integrate+with+the+release+process
+
 ThisBuild / description := "Collections for independently typed items."
 ThisBuild / organizationName := "so.dang.cool"
 ThisBuild / organizationHomepage := Some(url("https://so.dang.cool"))
