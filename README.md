@@ -8,4 +8,4 @@ Collections for independently typed items.
 
 BSD 3-clause license
 
-A 2022 side quest of [J.R. Hill](https://so.dang.cool).
+Created [just for fun](https://justforfunnoreally.dev). A 2022 side quest of [J.R. Hill](https://so.dang.cool).
