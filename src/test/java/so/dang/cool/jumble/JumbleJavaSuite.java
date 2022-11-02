@@ -19,8 +19,8 @@ public class JumbleJavaSuite extends TestNGSuite {
     public void jumbleOfThings() {
         Jumble jumble = Jumble.of(
                 "one", 1,
-                "two", 2,
-                "two", "two",
+                2, 2,
+                2, "two",
                 "three", 3,
                 "three", "three",
                 "three", List.of(1, 2, 3)
@@ -28,8 +28,8 @@ public class JumbleJavaSuite extends TestNGSuite {
 
         assertFalse(jumble.isEmpty());
         assertEquals(jumble.get("one", Integer.class), Optional.of(1));
-        assertEquals(jumble.get("two", Integer.class), Optional.of(2));
-        assertEquals(jumble.get("two", String.class), Optional.of("two"));
+        assertEquals(jumble.get(2, Integer.class), Optional.of(2));
+        assertEquals(jumble.get(2, String.class), Optional.of("two"));
         assertEquals(jumble.get("three", Integer.class), Optional.of(3));
         assertEquals(jumble.get("three", String.class), Optional.of("three"));
         assertEquals(jumble.get("three", List.class), Optional.of(List.of(1, 2, 3)));
