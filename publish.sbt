@@ -10,23 +10,23 @@ ThisBuild / publishMavenStyle := true
 
 ThisBuild / scmInfo := Some(
   ScmInfo(
-    url("https://github.com/hiljusti/jumble"),
-    "scm:git@github.com:hiljusti/jumble.git"
+    url("https://github.com/booniepepper/jumble"),
+    "scm:git@github.com:booniepepper/jumble.git"
   )
 )
 ThisBuild / developers := List(
   Developer(
-    id = "hiljusti",
+    id = "booniepepper",
     name = "J.R. Hill",
-    email = "hiljusti@so.dang.cool",
+    email = "justin@so.dang.cool",
     url = url("http://so.dang.cool")
   )
 )
 
 ThisBuild / licenses := List(
-  "BSD-3-Clause" -> new URL("https://github.com/hiljusti/jumble/blob/core/LICENSE")
+  "BSD-3-Clause" -> new URL("https://github.com/booniepepper/jumble/blob/core/LICENSE")
 )
-ThisBuild / homepage := Some(url("https://github.com/hiljusti/jumble"))
+ThisBuild / homepage := Some(url("https://github.com/booniepepper/jumble"))
 
 ThisBuild / pomIncludeRepository := { _ => false }
 ThisBuild / publishTo := {
