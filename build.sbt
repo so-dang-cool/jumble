@@ -1,6 +1,6 @@
 name := "jumble"
 organization := "so.dang.cool"
-version := "0.3.0"
+version := "0.3.1"
 
 // Do not include the scala library as a dependency.
 autoScalaLibrary := false
