@@ -19,7 +19,7 @@ ThisBuild / developers := List(
     id = "booniepepper",
     name = "J.R. Hill",
     email = "justin@so.dang.cool",
-    url = url("http://so.dang.cool")
+    url = url("https://so.dang.cool")
   )
 )
 
